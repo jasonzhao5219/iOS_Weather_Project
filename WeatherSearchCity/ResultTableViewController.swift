@@ -13,6 +13,13 @@ class ResultTableViewController: UITableViewController,AddItemDelegateThree {
         
     }
     
+    //dismiss to start page:
+    
+    @IBAction func BackToStart(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //init variables:
     var messageArrInResult = ["aa"]
     var resultTempMax = [1]
     var resultTempMin = [1]

@@ -9,13 +9,10 @@ class FirstTableViewController: UITableViewController,AddItemDelegateTwo {
         
     }
     
-    
-    @IBAction func AddBarPressed(_ sender: UIBarButtonItem) {
-        
+    //Back to start Page:
+    @IBAction func BackToStartController(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
-    
-    
-    
     
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -44,17 +41,18 @@ class FirstTableViewController: UITableViewController,AddItemDelegateTwo {
         
     }
     
-    
+    //Generate Tableview Cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cityTableViewCell") as! cityTableViewCell
        
-      cell.CityNameLabel.text = passingCityName[0]
+        cell.CityNameLabel.text = passingCityName[0]
         
         delegate?.addItem(by: self, messageArr: messageArr)
+        
         return cell
     }
-    
+    //Set Check Mark for every tableview cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
     }

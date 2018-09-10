@@ -36,6 +36,14 @@ class SecondTableViewController: UITableViewController {
         
     }
     
+    //back to firstViewController:
+    
+    @IBAction func BackToFirstController(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    //build talbeview cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherTableViewCell") as! weatherTableViewCell

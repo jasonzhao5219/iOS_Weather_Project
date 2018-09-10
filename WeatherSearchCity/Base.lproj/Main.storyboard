@@ -130,6 +130,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="ByL-Yl-nIA">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="biD-E1-fGV">
+                            <connections>
+                                <action selector="BackToStartController:" destination="8yF-nE-W2s" id="bDh-8h-WcS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Continue!" id="0vb-5d-srA">
                             <connections>
                                 <segue destination="e29-KA-UC0" kind="presentation" id="R0W-7S-wTC"/>
@@ -236,7 +241,13 @@
                             <outlet property="delegate" destination="6uE-ND-bUx" id="TKX-ur-Z2Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ResultTableViewController" id="Kfm-jE-Rhm"/>
+                    <navigationItem key="navigationItem" title="ResultTableViewController" id="Kfm-jE-Rhm">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ykn-BT-B1y">
+                            <connections>
+                                <action selector="BackToStart:" destination="6uE-ND-bUx" id="YF1-L1-Zqt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="br7-Wr-Vha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,6 +312,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="mk7-Si-hHm">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="yWK-Lp-ZNi">
+                            <connections>
+                                <action selector="BackToFirstController:" destination="FCo-Vq-ki2" id="eN8-jh-aYG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="See Result" id="ewI-ov-yPJ">
                             <connections>
                                 <segue destination="9Tl-FZ-UNl" kind="presentation" id="edo-pT-hjT"/>
